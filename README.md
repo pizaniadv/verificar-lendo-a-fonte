@@ -7,51 +7,77 @@ versao-core: 1.0
 
 # Verificar lendo a fonte
 
-> Skill para assistentes de IA, em uma linha: **índice localiza, fonte
-> autoriza**.
+> Skill para assistentes de IA, em uma linha: **índice localiza, fonte autoriza**.
 
 Nenhuma afirmação sobre o estado do mundo — o que existe, o que foi juntado, o
 que diz o documento — se faz a partir de representação. Faz-se abrindo a coisa.
 
-É a menor das skills desta família e a que mais muda o comportamento no dia a
-dia.
+É a menor da família e a que mais muda o comportamento no dia a dia.
 
-## O que conta como representação (e portanto não prova)
+## Calibrada por consequência, não uniforme
 
-Índice de pasta · ficha interna · resumo · planilha de controle · handoff da
-sessão anterior · a memória persistente do assistente · **o que foi dito antes
-nesta mesma conversa** · a sua própria lembrança.
+O esforço de abrir uma fonte é quase constante. O custo de errar, não: errar a
+data de um prazo não se compara a errar o nome de um município na qualificação.
+Verificação uniforme para tudo é regra impossível — e regra impossível não é
+seguida com moderação, é ignorada por inteiro, inclusive onde importava.
 
-O último é o mais perigoso, porque não parece uma fonte: parece conhecimento.
+**Fonte primária obrigatória**, sem exceção: o que entra em peça ou documento que
+sai do escritório; o que se afirma a cliente, juízo ou terceiro; o que embasa
+decisão difícil de reverter; e **data e termo inicial de prazo, sempre** — a
+categoria de erro mais cara.
 
-Representação e realidade divergem por três motivos banais: **defasagem** (o
-índice foi escrito quando a pasta tinha outra coisa), **otimismo** (registrou-se
-a intenção de juntar o documento, e a intenção sobreviveu ao fato de nunca ter
-juntado) e **herança** (o resumo copiou de outro resumo, e o erro original está
-a quatro saltos).
+**Representação tolerada** em triagem, hipótese de trabalho e planejamento
+interno, sob duas condições: rotule como não verificado ("segundo o índice", "a
+conferir"), e verifique **no momento em que a hipótese for promovida a
+afirmação**. A promoção é o gatilho.
 
-## O que ela faz
+## O que conta como representação
 
-- **Antes de afirmar que existe:** confere quatro coisas — existe, é o que diz
-  ser, está legível e completo, está vigente.
-- **Antes de afirmar que NÃO existe:** aplica o protocolo de busca exaustiva.
-  "Procurei e não achei" é *"minha busca falhou"*, não *"não existe"* — e as
-  duas frases levam a decisões opostas: pedir ao cliente documento que ele já
-  mandou, refazer pesquisa pronta, comprar consulta paga à toa. Inclui a regra
-  de que **busca lançada e não lida não foi feita**.
-- **Antes de pedir ao cliente:** procura no acervo e **nos autos** — procuração
-  e contrato social costumam já estar juntados por você mesmo.
-- **Antes de dizer "não é possível":** verifica se varreu os caminhos, porque
-  declarar impossibilidade por desconhecimento é alucinação por omissão.
-- **Ensina a declarar a verificação**: "confirmado, Num. 4455 - Pág. 2,
-  conferido agora" · "não localizei; procurei em A, B, C, com os termos D e E".
+Índice, ficha, resumo, planilha de controle, handoff, a memória persistente do
+assistente, **o que foi dito antes na própria conversa**, a sua lembrança — e
+**"fulano disse que conferiu"**, a verificação delegada.
+
+Os dois últimos são os mais perigosos. A lembrança não parece uma fonte: parece
+conhecimento. E a verificação delegada tem a forma de verificação, mas o que
+chega até você é o relato dela. Delegar é legítimo; perder o rastro não é. Quem
+verificou informa **o que abriu e o que viu** — "abri o Num. 4455, pág. 2, a
+procuração está assinada em 12/03" vale; "conferi, está tudo certo" não vale.
+
+## Antes de afirmar que NÃO existe — com critério de parada
+
+O erro mais caro é declarar ausência depois de uma busca só. **"Procurei e não
+achei" não é "não existe"**: é "minha busca falhou", e as duas frases levam a
+decisões opostas — pedir ao cliente documento que ele já mandou, refazer pesquisa
+feita, comprar consulta paga desnecessária.
+
+Cinco frentes: varrer o acervo inteiro (não só a pasta óbvia); variar o termo de
+busca; buscar por conteúdo, não só por nome de arquivo (o nome mente; o texto
+dentro, não — e documento em imagem não aparece em busca textual); checar os
+canais de entrada; e **ler o resultado** — busca lançada e não lida não foi
+feita.
+
+**E então parar.** A busca termina quando cada frente foi percorrida uma vez, com
+termos variados. Não se repete frente já coberta esperando resultado diferente.
+Se o prazo aperta antes de fechar as cinco, para-se e declara-se a cobertura
+parcial: ausência parcial declarada vale mais que ausência total inventada.
+
+## Quando a fonte primária está inacessível
+
+O sistema do tribunal fora do ar na véspera, o cartório que só abre segunda.
+"Não afirme" não resolve — o advogado precisa protocolar. Classifique a
+indisponibilidade; **registre a tentativa** com data, hora e captura (sem
+registro, não se fundamenta prorrogação); afirme pela melhor representação
+disponível **nomeando-a** ("segundo cópia dos autos obtida em DD/MM, estando o
+sistema indisponível"); e ancore a redação no que se pôde ver.
+
+O que descredencia não é a fonte secundária — é apresentá-la como se fosse a
+primária. **Não se perde prazo por pureza de método.**
 
 ## As três frases proibidas
 
 "Deve estar em..." · "Pelo que me lembro..." · "Provavelmente já foi feito".
 
-Todas podem ser ditas, desde que seguidas de "vou confirmar" — e seguidas
-mesmo.
+Todas podem ser ditas, desde que seguidas de "vou confirmar" — e seguidas mesmo.
 
 ## Instalação
 
@@ -64,29 +90,28 @@ Skills seguem o padrão aberto [Agent Skills](https://agentskills.io).
 
 ## Como usar
 
-`/verificar-lendo-a-fonte`, ou: "confere se", "isso existe mesmo", "cadê o
-documento", "já temos isso", "tem certeza?".
+`/verificar-lendo-a-fonte`, ou: "confere se" · "isso existe mesmo" · "cadê o
+documento" · "já temos isso" · "tem certeza?" · "sistema fora do ar".
 
-## A família
+## Executa sozinha
 
-- [`antialucinacao-juridica`](https://github.com/pizaniadv/antialucinacao-juridica)
-  — aplica esta disciplina em duas camadas: o fato contra o documento, a fonte
-  contra a fonte primária.
-- [`handoff-de-sessao`](https://github.com/pizaniadv/handoff-de-sessao) —
-  produz representação para a próxima sessão; esta skill é a razão pela qual
-  quem recebe reconfere.
+Não depende de outra skill.
+[`antialucinacao-juridica`](https://github.com/pizaniadv/antialucinacao-juridica)
+aplica esta disciplina em duas camadas;
+[`handoff-de-sessao`](https://github.com/pizaniadv/handoff-de-sessao) produz
+representação para a próxima sessão — e esta skill é a razão pela qual quem
+recebe reconfere.
 
 ## Licença
 
 Licenciamento duplo, ambos copyleft, ambos com **atribuição nominal
-obrigatória**: **[AGPL-3.0](LICENSE)** para o componente executável e
-**[CC BY-SA 4.0](LICENSE-DOCS)** para a obra textual.
-
-Uso no seu escritório não gera obrigação nenhuma. **Distribuir** versão
-modificada, ou **oferecê-la a terceiros como serviço**, exige abrir o código e
-manter a atribuição. O [NOTICE](NOTICE) é parte da licença.
+obrigatória**: **[AGPL-3.0](LICENSE)** e **[CC BY-SA 4.0](LICENSE-DOCS)**. Uso
+próprio não gera obrigação; distribuir ou servir a terceiros exige abrir o
+código e manter a atribuição. O [NOTICE](NOTICE) é parte da licença.
 
 ## Autor
 
 **Raphael Sousa Pizani Silva** — OAB/BA 32.472
 [github.com/pizaniadv](https://github.com/pizaniadv)
+
+Histórico de versões no [CHANGELOG](CHANGELOG.md).
